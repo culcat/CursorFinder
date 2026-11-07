@@ -72,6 +72,15 @@ Trigger a manual locate pulse (can also be bound to a hotkey in `~/.config/hypr/
 omarchy-shell cursor-finder locate
 ```
 
+### Keybindings / Хоткеи (`~/.config/hypr/bindings.lua`)
+
+Add to `~/.config/hypr/bindings.lua`:
+
+```lua
+o.bind("SUPER + ALT + C", "Cursor Finder settings", "omarchy-shell cursor-finder settings")
+o.bind("SUPER + CTRL + ALT + C", "Locate cursor", "omarchy-shell cursor-finder locate")
+```
+
 Check status or change settings from the terminal:
 
 ```bash

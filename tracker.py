@@ -392,6 +392,8 @@ def main() -> int:
             is_visible, scale = detector.update(dx, dy, now_ms)
 
             if is_visible:
+                if not was_visible:
+                    hypr.ensure_layer_rule()
                 frames_visible += 1
                 msg = f"FRAME {x} {y} {scale:.3f}"
                 if msg != last_emitted:
