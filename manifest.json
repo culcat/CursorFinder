@@ -4,6 +4,9 @@
   "name": "Cursor Finder",
   "version": "1.0.0",
   "author": "culcat",
+  "license": "MIT",
+  "homepage": "https://github.com/culcat/CursorFinder",
+  "repository": "https://github.com/culcat/CursorFinder.git",
   "description": "macOS-style shake mouse pointer to locate — enlarges the cursor when shaken rapidly.",
   "kinds": [
     "service",

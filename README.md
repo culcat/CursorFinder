@@ -1,5 +1,7 @@
 # CursorFinder (`culcat.cursor-finder`)
 
+![CursorFinder Preview](./preview.png)
+
 macOS-style **"Shake mouse pointer to locate"** plugin for **Omarchy** (`omarchy-shell` / Hyprland).
 
 When you rapidly shake the mouse back and forth, the cursor smoothly scales up into a crisp high-DPI vector pointer so you can immediately spot it on large or multi-monitor setups, then smoothly shrinks back when you stop.
@@ -15,24 +17,41 @@ When you rapidly shake the mouse back and forth, the cursor smoothly scales up i
 
 ---
 
+## Requirements & Dependencies / Зависимости
+
+- **Omarchy** (`omarchy-shell` / Quickshell)
+- **Hyprland** (`>= 0.50`)
+- **Python 3** (`python3`, standard library only — no third-party pip packages required)
+
+---
+
 ## Installation / Установка
 
 Install and enable directly via Omarchy's plugin manager:
 
 ```bash
-omarchy plugin add git@github.com:culcat/CursorFinder.git --enable
-```
-
-Or via HTTPS:
-
-```bash
 omarchy plugin add https://github.com/culcat/CursorFinder.git --enable
 ```
 
-Update at any time:
+Or via SSH:
+
+```bash
+omarchy plugin add git@github.com:culcat/CursorFinder.git --enable
+```
+
+### Updating / Обновление
 
 ```bash
 omarchy plugin update culcat.cursor-finder
+```
+
+### Removal / Удаление
+
+Disable or completely remove the plugin at any time:
+
+```bash
+omarchy plugin disable culcat.cursor-finder
+omarchy plugin remove culcat.cursor-finder
 ```
 
 ---
@@ -82,3 +101,17 @@ Settings are persisted automatically in `~/.config/omarchy/cursor-finder.json` (
   "hideNativeCursor": true
 }
 ```
+
+---
+
+## Security & Permissions / Безопасность
+
+- Runs entirely in user space as a child process of `omarchy-shell`.
+- Communicates solely with Hyprland's local UNIX socket (`$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket.sock`).
+- Makes **no network requests**, requires **no root/sudo privileges**, and automatically restores the native hardware cursor on exit or reload.
+
+---
+
+## License
+
+Released under the [MIT License](./LICENSE).
