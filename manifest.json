@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "culcat.cursor-finder",
+  "name": "Cursor Finder",
+  "version": "1.0.0",
+  "author": "culcat",
+  "description": "macOS-style shake mouse pointer to locate — enlarges the cursor when shaken rapidly.",
+  "kinds": [
+    "service",
+    "panel"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml",
+    "panel": "Panel.qml"
+  }
+}
