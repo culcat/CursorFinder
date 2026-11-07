@@ -116,8 +116,8 @@ Settings are persisted automatically in `~/.config/omarchy/cursor-finder.json` (
 ## Security & Permissions / Безопасность
 
 - Runs entirely in user space as a child process of `omarchy-shell`.
-- Communicates solely with Hyprland's local UNIX socket (`$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket.sock`).
-- Makes **no network requests**, requires **no root/sudo privileges**, and automatically restores the native hardware cursor on exit or reload.
+- Communicates solely with Hyprland's local IPC socket (`$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket.sock`).
+- Operates completely offline within the local graphical session and automatically restores the native hardware cursor on exit or reload.
 
 ---
 
